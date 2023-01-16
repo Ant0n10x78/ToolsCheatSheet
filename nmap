@@ -1,0 +1,45 @@
+NMAP sheetcheat
+
+General usefull information:
+-By default nmap reach first a ping
+
+
+##################----- Basic scan -----##############
+#TCP scan
+nmap -sT [ip]
+
+#UDP scan 
+nmap -sU [ip]
+
+###################-----  Stealth scan  -----#################
+#scan of a Xmas flag
+nmap -sX [ip]
+
+#scan of a FIN flag
+nmap -sF [ip]
+
+#scan of a SYN flag
+nmap -sS [ip]
+
+
+##################------ nmap script -----##############
+
+#scan with scripts:
+nmap --script=<script_name> [ip]
+
+
+#type of scripts:
+safe:- Won't affect the target
+intrusive:- Not safe: likely to affect the target
+vuln:- Scan for vulnerabilities
+exploit:- Attempt to exploit a vulnerability
+auth:- Attempt to bypass authentication for running services (e.g. Log into an FTP server anonymously)
+brute:- Attempt to bruteforce credentials for running services
+discovery:- Attempt to query running services for further information about the network (e.g. query an SNMP server).
+
+
+#############################################
+#############################################
+Usefull RFC:
+-RFC 793
+
