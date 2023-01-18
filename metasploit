@@ -1,0 +1,15 @@
+Usefull commands
+
+######## 
+#To search an exploit
+search x
+
+
+#To get information of an exploit
+info <exploit_name>
+
+#To show the recommended arguments
+show option
+
+#To set 
+set <parameter> <value>
