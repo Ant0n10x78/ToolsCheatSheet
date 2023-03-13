@@ -2,10 +2,11 @@
 
 #Reconnaissance PhASE
 
--whois
--nslookup
--traceroute
--dig
--shodan
--recon-ng
--nmap
+-whois \n
+-nslookup \n
+-traceroute \n
+-dig \n
+-shodan \n
+-recon-ng \n
+-nmap \n
+-maltego \n
