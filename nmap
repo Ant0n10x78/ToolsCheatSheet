@@ -21,7 +21,29 @@ nmap -sF [ip]
 #scan of a SYN flag
 nmap -sS [ip]
 
+##################------ Network Scan -----#############
+#scan every machine in a subnet
+nmap -PE -sn [ip]/24
 
+#In an attempt to discover live hosts using ICMP address mask queries
+nmap -PM -sn [ip]/24
+
+
+##################------ Host up/down -------############
+#check if the target is up with an UDP ping
+#sending a UDP packet to any closed UDP port can trigger a response indirectly indicating that the target is online.
+nmap -PU -sn [ip]
+
+#TCP SYN ping 
+nmap -PS -sn [ip]
+
+Masscan uses a similar approach to discover the available systems
+
+
+##################------ Nmap DNS -----#############
+#By default, Nmap will look up online hosts; however, you can use the option -R to query the DNS server even for offline hosts.
+#If you want to use a specific DNS server, you can add the --dns-servers DNS_SERVER option.
+# if you don’t want to send such DNS queries, you use -n
 ##################------ nmap script -----##############
 
 #scan with scripts:
@@ -43,3 +65,9 @@ discovery:- Attempt to query running services for further information about the 
 Usefull RFC:
 -RFC 793
 
+
+
+############################################
+Source :
+tryhackme.com
+nmap.org
