@@ -1,15 +1,83 @@
-Usefull commands
+##################----- Initialization -----##############
 
-######## 
-#To search an exploit
-search x
+#Initialize the database
+msfdb init
 
+#Launch Metasploit
+msfconsole
 
-#To get information of an exploit
-info <exploit_name>
+##################----- Exploit and Module Search -----##############
 
-#To show the recommended arguments
-show option
+#Keyword-based exploit/module search
+search [keywords]
 
-#To set 
-set <parameter> <value>
+#Search for exploits targeting a specific service
+search type:exploit [service]
+
+##################----- Exploit and Module Usage -----##############
+
+#Use an exploit/module
+use [exploit/module path]
+
+#Display information about the exploit/module
+info
+
+#Show required and optional options for the exploit/module
+show options
+
+#Set an option
+set [option] [value]
+
+#Set multiple options globally
+setg [option] [value]
+
+#Execute the exploit/module
+exploit
+
+#Execute the exploit in the background
+exploit -j -z
+
+##################----- Payloads -----##############
+
+#Show payloads compatible with the selected exploit
+show payloads
+
+#Set a payload
+set PAYLOAD [payload path]
+
+#Show options for the selected payload
+show options
+
+##################----- Sessions -----##############
+
+#List active sessions
+sessions
+
+#Interact with a specific session
+sessions -i [session ID]
+
+#Migrate a process (useful for session stability)
+migrate [process ID]
+
+#Background an active session
+background
+
+#Kill a session
+sessions -k [session ID]
+
+##################----- Post-exploitation -----##############
+
+#Use a post-exploitation module
+use [post-exploitation module path]
+
+#Set the session to use
+set SESSION [session ID]
+
+#Execute the post-exploitation module
+exploit/run
+
+##################----- Resources -----##############
+
+Metasploit Unleashed: https://www.offensive-security.com/metasploit-unleashed/
+Metasploit documentation: https://docs.rapid7.com/metasploit/
+Metasploit GitHub: https://github.com/rapid7/metasploit-framework
