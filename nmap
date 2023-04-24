@@ -62,6 +62,7 @@ discovery:- Attempt to query running services for further information about the 
 Exemple :
 nmap -p 80 --script http-brute --script-args 'http-brute.hostname=<target>,http-brute.method=<method>,userdb=<userfile>,passdb=<passfile>' <your-server-IP>
 
+nmap -p 3306 --script mysql-brute --script-args 'userdb=<userfile>,passdb=<passfile>' <your-server-IP>
 
 
 #############################################
