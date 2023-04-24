@@ -4,20 +4,10 @@ A quick reference guide for using TShark, the command-line network protocol anal
 
 ## Table of Contents
 
-- [Initialization](#initialization)
 - [Capture and Analysis](#capture-and-analysis)
 - [Advanced Usage](#advanced-usage)
 - [Resources](#resources)
 
-## Initialization
-
-### Install TShark on Ubuntu/Debian-based systems
-
-`sudo apt-get install tshark`
-
-### Install TShark on CentOS/RHEL-based systems
-
-`sudo yum install wireshark`
 
 ## Capture and Analysis
 
