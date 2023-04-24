@@ -45,6 +45,9 @@ tshark -r [input_file] --export-objects [protocol],[output_directory]
 
 ###Print all protocols used in a pcap cature
 tshark -r [input_file] -T fields -e frame.protocols -Y "frame.protocols" | sort | uniq
+#For live traffic
+tshark -i [interface] -T fields -e frame.protocols -Y "frame.protocols" | sort | uniq
+
 
 
 
