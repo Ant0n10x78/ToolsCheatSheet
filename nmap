@@ -59,6 +59,10 @@ auth:- Attempt to bypass authentication for running services (e.g. Log into an F
 brute:- Attempt to bruteforce credentials for running services
 discovery:- Attempt to query running services for further information about the network (e.g. query an SNMP server).
 
+Exemple :
+nmap -p 80 --script http-brute --script-args 'http-brute.hostname=<target>,http-brute.method=<method>,userdb=<userfile>,passdb=<passfile>' <your-server-IP>
+
+
 
 #############################################
 #############################################
