@@ -1,2 +1,6 @@
 
 Common use of wireshark
+
+##################################
+We can decrypt a TLS ; SSL packet with wireshark if we got the key:
+Edit > Preferences > Protocols > TLS >  [+]
