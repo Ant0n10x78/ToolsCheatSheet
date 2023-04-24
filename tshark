@@ -10,48 +10,43 @@ A quick reference guide for using TShark, the command-line network protocol anal
 
 
 ## Capture and Analysis
-
 ### Capture traffic on a specific interface
-
-`tshark -i [interface]`
+tshark -i [interface]
 
 ### Capture traffic and save to a file
-
-`tshark -i [interface] -w [output_file]`
-
+tshark -i [interface] -w [output_file]
 ### Read a capture file
-
-`tshark -r [input_file]`
+tshark -r [input_file]
 
 ### Display specific fields from a capture
-
-`tshark -r [input_file] -T fields -e [field_name]`
+tshark -r [input_file] -T fields -e [field_name]
 
 ### Filter traffic by protocol
-
-`tshark -i [interface] -Y "[protocol]"`
+tshark -i [interface] -Y "[protocol]"
 
 ### Filter traffic by IP address
-
-`tshark -i [interface] -Y "ip.addr == [IP_address]"`
+tshark -i [interface] -Y "ip.addr == [IP_address]"
 
 ### Filter traffic by port
-
-`tshark -i [interface] -Y "tcp.port == [port]"`
+tshark -i [interface] -Y "tcp.port == [port]"
 
 ## Advanced Usage
-
 ### Display statistics
-
-`tshark -r [input_file] -q -z [statistic]`
+tshark -r [input_file] -q -z [statistic]
 
 ### Decrypt SSL/TLS traffic
-
-`tshark -r [input_file] -o "ssl.keylog_file: [keylogfile]" -Y "ssl"`
+tshark -r [input_file] -o "ssl.keylog_file: [keylogfile]" -Y "ssl"
 
 ### Export objects from a capture
 
-`tshark -r [input_file] --export-objects [protocol],[output_directory]`
+tshark -r [input_file] --export-objects [protocol],[output_directory]
+
+######################----------Analysis command-----#######################
+
+###Print all protocols used in a pcap cature
+tshark -r [input_file] -T fields -e frame.protocols -Y "frame.protocols" | sort | uniq
+
+
 
 ## Resources
 
