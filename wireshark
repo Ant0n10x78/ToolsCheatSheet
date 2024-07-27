@@ -4,6 +4,8 @@ Common use of wireshark
 ##################################
 We can decrypt a TLS ; SSL packet with wireshark if we got the key:
 Edit > Preferences > Protocols > TLS >  [+]
+The SSLkeylogfile can be find in the variables environnment :
+On Windows enter "env" and then "Environment Variables..."
 
 
 
