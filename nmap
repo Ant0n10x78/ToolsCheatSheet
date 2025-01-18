@@ -11,6 +11,13 @@ nmap -sT [ip]
 #UDP scan 
 nmap -sU [ip]
 
+#################-----  Information scan  -----###############
+# OS information
+nmap -O [ip]
+
+# Service information
+nmap -sV [ip]
+
 ###################-----  Stealth scan  -----#################
 #scan of a Xmas flag
 nmap -sX [ip]
