@@ -1,8 +1,9 @@
 NMAP sheetcheat
 
 General usefull information:
--By default nmap reach first a ping
+-By default nmap reach first a ping (-sS to avoid it)
 
+The GUI of nmap is zenmap : https://nmap.org/zenmap/
 
 ##################----- Basic scan -----##############
 #TCP scan
